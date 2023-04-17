@@ -115,6 +115,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #020506;
     /* position: sticky;
     top: 0; */
 }
@@ -156,8 +157,10 @@ nav {
 
 
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    z-index: 1;
+    width: 100%;
 }
 
 /* diseños del cuerpo de slider de imagenes*/
@@ -176,6 +179,7 @@ img {
 }
 
 .slider {
+    margin-top: 9rem;
     display: flex;
     transform: translate3d(0, 0, 0);
     transition: all 600ms;
@@ -309,24 +313,99 @@ input[id="5"]:checked ~ .pagina .item-pagina[for="5"] {
 
 /* diseños de los container de los productos*/
 
-.container-img {
+.container-img,.container-img1,.container-img2 {
     width: 100%;
     height: 600px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #fff;
+}
+
+.container-img {
+    background-color: #265864;
+}
+
+.container-img1 {
+    background-color: #172429;
+}
+
+.container-img2 {
+    background: linear-gradient(#132c33,#000000);
 }
 
 .imagen img {
-    width: 600px;
+    width: 700%;
 }
 
-.text p {
+.imagen,.imagen2,.text1 {
+    margin-left: 5.8%;
+}
+
+.text,.text2 {
+    width: 28%;
+    margin-right: 15%;
     color: #ffffff;
     text-align: center;
-    font: italic normal 600 20px/67px Segoe UI;
+    font: italic normal 600 30px/67px Segoe UI;
     letter-spacing: 0px;
-    color: #F8F4F4;
     opacity: 1;
+}
+
+.imagen2 img,.imagen1 img {
+    width: 800px;
+}
+
+.text1 {
+    width: 25%;
+    height: 50%;
+    color: #ffffff;
+    text-align: center;
+    font: italic normal 600 25px/67px Segoe UI;
+    letter-spacing: 0px;
+    opacity: 1;
+    margin-left: 12.5%;
+}
+.text1 h1{
+    line-height: 50px;
+}
+
+.text1 p {
+    margin-top: 15px;
+    line-height: 35px;
+}
+
+.text1 a {
+    padding: 5px 20px;
+    background-color: #DC8B12;
+    text-decoration: none;
+    text-align: center;
+    font: italic normal 600 25px/30px Segoe UI;
+    letter-spacing: 0px;
+    color: #0A0A0A;
+    opacity: 1;
+    border-radius: 15px;
+}
+
+/*diseños para el pie de pagina*/
+
+footer {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-siguenos,.footer-contacto,.footer-horarios {
+    width: 15%;
+    height: 80%;
+    border: 1px solid #ffffff;
+}
+
+.footer-siguenos {
+    margin-left: 10%;
+}
+
+.footer-horarios {
+    margin-right: 10%;
 }
