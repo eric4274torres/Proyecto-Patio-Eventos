@@ -176,10 +176,11 @@ img {
     margin-top: 0.47%;
     border-radius: 6px;
     overflow: hidden;
+    box-shadow: 0px 31px 37px -7px rgba(0,0,0,0.48);
 }
 
 .slider {
-    margin-top: 9rem;
+    margin-top: 9.5rem;
     display: flex;
     transform: translate3d(0, 0, 0);
     transition: all 600ms;
@@ -330,7 +331,9 @@ input[id="5"]:checked ~ .pagina .item-pagina[for="5"] {
 }
 
 .container-img2 {
+    position: relative;
     background: linear-gradient(#132c33,#000000);
+    box-shadow: 0px 20px 14px -8px #1C4049;
 }
 
 .imagen img {
@@ -394,12 +397,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #000000;
 }
 
 .footer-siguenos,.footer-contacto,.footer-horarios {
     width: 15%;
     height: 80%;
-    border: 1px solid #ffffff;
+    text-align: center;
+    font: italic normal normal 15px/30px Segoe UI;
+    letter-spacing: 0px;
+    color: #F5F5F5;
+    opacity: 1;
 }
 
 .footer-siguenos {
@@ -408,4 +416,27 @@ footer {
 
 .footer-horarios {
     margin-right: 10%;
+}
+
+.footer-siguenos img {
+    width: 50px;
+    margin: 10px;
+}
+
+.footer-contacto img {
+    width: 45px;
+}
+
+.alinear {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.alinear a{
+    margin-left: 20%;
+}
+
+.img {
+    width: 50%;
+    margin-right: 20%;
 }
