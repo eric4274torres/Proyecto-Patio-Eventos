@@ -7,10 +7,6 @@
 html,
 body {
     height: 100vh;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    background: linear-gradient(#020506, #265864, #000000);
 }
 
 .container-principal {
@@ -77,7 +73,7 @@ nav {
     height: 5px;
 
 
-    
+
     width: 0%;
     background: #905725;
     position: absolute;
