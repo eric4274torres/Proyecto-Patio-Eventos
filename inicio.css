@@ -71,9 +71,6 @@ nav {
 .menu-horizontal>li::before {
     content: "";
     height: 5px;
-
-
-
     width: 0%;
     background: #905725;
     position: absolute;
@@ -183,7 +180,7 @@ img {
 }
 
 .slider {
-    margin-top: 9.5rem;
+    margin-top: 9rem;
     display: flex;
     transform: translate3d(0, 0, 0);
     transition: all 600ms;
@@ -357,9 +354,10 @@ input[id="5"]:checked~.pagina .item-pagina[for="5"] {
     margin-right: 15%;
     color: #ffffff;
     text-align: center;
-    font: italic normal 600 30px/67px Segoe UI;
+    font: italic normal 600 35px/67px Segoe UI;
     letter-spacing: 0px;
     opacity: 1;
+    line-height: normal;
 }
 
 .imagen2 img,
@@ -432,7 +430,7 @@ footer {
 
 .footer-siguenos img {
     width: 50px;
-    margin: 10px;
+    margin: 15px;
 }
 
 .footer-contacto img {
@@ -446,10 +444,13 @@ footer {
 }
 
 .alinear a {
-    margin-left: 20%;
+    margin-left: 60px;
 }
 
-.img {
-    width: 50%;
-    margin-right: 20%;
+.alinear p {
+    margin-right: 33px;
+}
+
+.alinear .p {
+    margin-right: 115px;
 }
