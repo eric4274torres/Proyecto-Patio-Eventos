@@ -1,3 +1,10 @@
+.principal {
+    background: linear-gradient(#020506, #265864, #000000);
+    background-repeat: no-repeat;
+    height: 3150px;
+    width: 100%;   
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -6,11 +13,7 @@
 
 body {
     height: 100vh;
-}
-
-.container-principal {
-    width: 100%;
-    height: 100vh;
+    background: linear-gradient(#020506, #265864, #000000);
 }
 
 nav {
@@ -64,7 +67,6 @@ nav {
 .menu-horizontal>li {
     display: inline-block;
     position: relative;
-    text-align: center;
 }
 
 .menu-horizontal>li::before {
@@ -130,7 +132,7 @@ nav {
     margin-right: 12%;
 }
 
-.imag {
+.img {
     width: 40px;
 }
 
@@ -154,43 +156,42 @@ nav {
     -webkit-text-stroke: 0.5px #AF2727;
 }
 
-
 header {
     position: fixed;
     top: 0;
     z-index: 1;
     width: 100%;
 }
-
-/* diseños del cuerpo de slider de imagenes*/
-
-img {
-    max-width: 100%;
+.imagen {
+    width: 200px;
+    height: 107px;
+    margin-left: 85px;
+    margin-top: -15px;
 }
 
-.interaction {
+.container-all {
+    margin-top: 10rem;
     position: relative;
-    max-width: 100%;
+    max-width: 10000px;
     width: 100%;
-    margin-top: 0.47%;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0px 31px 37px -7px rgba(0, 0, 0, 0.48);
 }
 
-.slider {
-    margin-top: 9rem;
+.slide {
     display: flex;
     transform: translate3d(0, 0, 0);
     transition: all 600ms;
-    animation-name: autoplay;
-    animation-duration: 15s;
+    animation: autoplay;
+    animation-duration: 6.5s;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
+
 }
 
-.item {
+.item-slide {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -199,7 +200,7 @@ img {
     max-width: 100%;
 }
 
-.pagina {
+.pagination {
     position: absolute;
     bottom: 20px;
     left: 0;
@@ -210,11 +211,11 @@ img {
     width: 100%;
 }
 
-.item-pagina {
+.pagination-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #ffffff;
+    border: 2px solid white;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -226,177 +227,137 @@ img {
     transition: all 300ms;
 }
 
-.item-pagina:hover {
+.pagination-item:hover {
     transform: scale(3);
 }
 
-.item-pagina img {
+.pagination-item img {
     display: inline-block;
     max-width: none;
     height: 100%;
     transform: scale(1);
     opacity: 0;
     transition: all 300ms;
+
 }
 
-.item-pagina:hover img {
+.pagination-item:hover img {
     opacity: 1;
     transform: scale(1);
 }
 
-input[id="1"]:checked~.slider {
+input[id="1"]:checked~.slide {
     animation: none;
     transform: translate3d(0, 0, 0);
 }
 
-input[id="1"]:checked~.pagina .item-pagina[for="1"] {
-    background: #ffffff;
+input[id="1"]:checked~.pagination .pagination-item[for="1"] {
+    background: #fff;
 }
 
-input[id="2"]:checked~.slider {
+input[id="2"]:checked~.slide {
     animation: none;
     transform: translate3d(calc(-100% * 1), 0, 0);
 }
 
-input[id="2"]:checked~.pagina .item-pagina[for="2"] {
-    background: #ffffff;
+input[id="2"]:checked~.pagination .pagination-item[for="2"] {
+    background: #fff;
 }
 
-input[id="3"]:checked~.slider {
+input[id="3"]:checked~.slide {
     animation: none;
     transform: translate3d(calc(-100% * 2), 0, 0);
 }
 
-input[id="3"]:checked~.pagina .item-pagina[for="3"] {
-    background: #ffffff;
-}
-
-input[id="4"]:checked~.slider {
-    animation: none;
-    transform: translate3d(calc(-100% * 3), 0, 0);
-}
-
-input[id="4"]:checked~.pagina .item-pagina[for="4"] {
-    background: #ffffff;
-}
-
-input[id="5"]:checked~.slider {
-    animation: none;
-    transform: translate3d(calc(-100% * 4), 0, 0);
-}
-
-input[id="5"]:checked~.pagina .item-pagina[for="5"] {
-    background: #ffffff;
+input[id="3"]:checked~.pagination .pagination-item[for="3"] {
+    background: #fff;
 }
 
 @keyframes autoplay {
-    20% {
+    33% {
         transform: translate3d(calc(-100% * 0), 0, 0);
+
     }
 
-    40% {
+    66% {
         transform: translate3d(calc(-100% * 1), 0, 0);
-    }
 
-    60% {
-        transform: translate3d(calc(-100% * 2), 0, 0);
-    }
-
-    80% {
-        transform: translate3d(calc(-100% * 3), 0, 0);
     }
 
     100% {
-        transform: translate3d(calc(-100% * 4), 0, 0);
+        transform: translate3d(calc(-100% * 2), 0, 0);
+
     }
 }
 
-/* diseños de los container de los productos*/
 
-.container-img,
-.container-img1,
-.container-img2 {
+.imagenes {
+    margin-top: -70px;
+    margin-left: 85%;
+}
+
+.titulo h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    color: aliceblue;
+    font: italic normal bold 35px/35px Segoe UI;
+    text-align: center;
+    background-color: #265864;
+}
+.container1,.container2,.container3 {
     width: 100%;
     height: 600px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
-.container-img {
+.container1{
     background-color: #265864;
 }
-
-.container-img1 {
+.container2 {
     background-color: #172429;
 }
-
-.container-img2 {
+.container3 {
     position: relative;
     background: linear-gradient(#132c33, #000000);
     box-shadow: 0px 20px 14px -8px #1C4049;
 }
-
-.imagen img {
-    width: 700%;
-}
-
-.imagen,
-.imagen2,
-.text1 {
-    margin-left: 5.8%;
-}
-
-.text,
-.text2 {
-    width: 28%;
-    margin-right: 15%;
-    color: #ffffff;
-    text-align: center;
-    font: italic normal 600 35px/67px Segoe UI;
-    letter-spacing: 0px;
-    opacity: 1;
-    line-height: normal;
-}
-
-.imagen2 img,
-.imagen1 img {
-    width: 800px;
-}
-
-.text1 {
+.listados {
+    display: flex;
     width: 25%;
-    height: 50%;
-    color: #ffffff;
+    height: 70%;
+}
+.lista {
+    width: 50%;
+    height: 40%;
+    margin: auto;
     text-align: center;
-    font: italic normal 600 25px/67px Segoe UI;
+    font: italic normal bold 30px/67px Sitka Banner;
     letter-spacing: 0px;
-    opacity: 1;
-    margin-left: 12.5%;
+    line-height: normal;
+    color: #FFFFFF;
+    opacity:1;
 }
-
-.text1 h1 {
-    line-height: 50px;
-}
-
-.text1 p {
-    margin-top: 15px;
-    line-height: 35px;
-}
-
-.text1 a {
-    padding: 5px 20px;
-    background-color: #DC8B12;
-    text-decoration: none;
+.lista h4 {
     text-align: center;
-    font: italic normal 600 25px/30px Segoe UI;
+    font: italic normal bold 35px/67px Sitka Banner;
     letter-spacing: 0px;
-    color: #0A0A0A;
-    opacity: 1;
-    border-radius: 15px;
+    line-height: normal;
+    color: #FFFFFF;
+    opacity:1;
 }
-
-/*diseños para el pie de pagina*/
+.logo-img{
+    width: 50%;
+}
+.logo-img img{
+    width: 100%;
+    height: 100%;
+}
+.marg {
+    margin: auto;
+}
 
 footer {
     width: 100%;
