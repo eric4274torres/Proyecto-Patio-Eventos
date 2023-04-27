@@ -158,6 +158,10 @@ header {
   width: 100%;
 }
 
+
+
+
+
 img {
   max-width: 100%;
 }
@@ -279,6 +283,10 @@ input[id="3"]:checked~.pagina .item-pagina[for="3"] {
   }
 }
 
+
+
+
+
 .info-one,
 .info-two,
 .info-three {
@@ -394,11 +402,13 @@ footer {
 }
 
 .alinear a {
-  margin-left: 60px;
+  margin-left: 55px;
 }
+
 .alinear p {
-  margin-right: 33px;
+  margin-right: 10px;
 }
+
 .alinear .p {
-  margin-right: 115px;
+  margin-right: 90px;
 }

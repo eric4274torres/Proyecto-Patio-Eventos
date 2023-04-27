@@ -2,7 +2,7 @@
     background: linear-gradient(#020506, #265864, #000000);
     background-repeat: no-repeat;
     height: 3150px;
-    width: 100%;   
+    width: 100%;
 }
 
 * {
@@ -162,6 +162,8 @@ header {
     z-index: 1;
     width: 100%;
 }
+
+/*----------------------------------------------------------------*/
 .imagen {
     width: 200px;
     height: 107px;
@@ -290,6 +292,7 @@ input[id="3"]:checked~.pagination .pagination-item[for="3"] {
     }
 }
 
+/*----------------------------------------------------------------*/
 
 .imagenes {
     margin-top: -70px;
@@ -306,29 +309,37 @@ input[id="3"]:checked~.pagination .pagination-item[for="3"] {
     text-align: center;
     background-color: #265864;
 }
-.container1,.container2,.container3 {
+
+.container1,
+.container2,
+.container3 {
     width: 100%;
     height: 600px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.container1{
+
+.container1 {
     background-color: #265864;
 }
+
 .container2 {
     background-color: #172429;
 }
+
 .container3 {
     position: relative;
     background: linear-gradient(#132c33, #000000);
     box-shadow: 0px 20px 14px -8px #1C4049;
 }
+
 .listados {
     display: flex;
     width: 25%;
     height: 70%;
 }
+
 .lista {
     width: 50%;
     height: 40%;
@@ -338,27 +349,32 @@ input[id="3"]:checked~.pagination .pagination-item[for="3"] {
     letter-spacing: 0px;
     line-height: normal;
     color: #FFFFFF;
-    opacity:1;
+    opacity: 1;
 }
+
 .lista h4 {
     text-align: center;
     font: italic normal bold 35px/67px Sitka Banner;
     letter-spacing: 0px;
     line-height: normal;
     color: #FFFFFF;
-    opacity:1;
+    opacity: 1;
 }
-.logo-img{
+
+.logo-img {
     width: 50%;
 }
-.logo-img img{
+
+.logo-img img {
     width: 100%;
     height: 100%;
 }
+
 .marg {
     margin: auto;
 }
 
+/*----------------------------------------------------------------*/
 footer {
     width: 100%;
     height: 170px;
@@ -404,13 +420,13 @@ footer {
 }
 
 .alinear a {
-    margin-left: 60px;
+    margin-left: 55px;
 }
 
 .alinear p {
-    margin-right: 33px;
+    margin-right: 10px;
 }
 
 .alinear .p {
-    margin-right: 115px;
+    margin-right: 90px;
 }
