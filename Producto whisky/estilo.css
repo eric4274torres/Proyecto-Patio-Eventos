@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+nav {
+    max-width: 100%;
+    background-color: #DC8B12;
+    margin-top: -8px;
+}
+
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu-horizontal>li>a {
+    display: block;
+    padding: 15px 25px;
+    font: italic normal bold 25px/35px Segoe UI;
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu-horizontal>li:hover {
+    background-color: #d2830ea3;
+}
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 154px;
+    background-color: #DC8B12;
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+}
+
+.menu-vertical li:hover {
+    background-color: #d2830ea3;
+}
+
+.menu-vertical li a {
+    display: block;
+    color: #000000;
+    padding: 15px 15px 15px 20px;
+    font: italic normal bold 25px/35px Segoe UI;
+    text-decoration: none;
+}
+
+.menu-horizontal>li {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.menu-horizontal>li::before {
+    content: "";
+    height: 5px;
+    width: 0%;
+    background: #905725;
+    position: absolute;
+    left: 0;
+    bottom: -0px;
+    transition: 0.4s ease-out;
+}
+
+.menu-horizontal>li:hover::before {
+    width: 100%;
+}
+
+.menu-vertical>li {
+    display: inline-block;
+    width: 154px;
+    position: relative;
+}
+
+.menu-vertical>li::before {
+    content: "";
+    height: 5px;
+    width: 0%;
+    background: #905725;
+    position: absolute;
+    left: 0;
+    bottom: -0px;
+    transition: 0.4s ease-out;
+}
+
+.menu-vertical>li:hover::before {
+    width: 100%;
+}
+
+.nav-logos {
+    width: 100%;
+    margin: auto;
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #020506;
+}
+
+.log {
+    width: 200px;
+    cursor: pointer;
+}
+
+.nav-logos li {
+    display: inline-block;
+    margin: 0 20px;
+    margin-top: 10px;
+}
+
+.nav-logos ul {
+    margin-right: 12%;
+}
+
+.img {
+    width: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12%;
+}
+
+.logo h1 {
+    text-align: center;
+    text-align: left;
+    font: normal normal normal 50px/8px Vladimir Script;
+    letter-spacing: 0px;
+    color: #DFAA2D;
+    text-shadow: 0px 3px 6px #1219E4DB;
+    opacity: 1;
+    margin-left: -40px;
+    margin-top: 10px;
+    -webkit-text-stroke: 0.5px #AF2727;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 665.83px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10.1rem;
+    background: radial-gradient(#F8F2F2, #0A0909, #000000);
+}
+.img-bucana {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text {
+    width: 25%;
+    height: 32%;
+}
+.text {
+    color: aliceblue;
+    font: italic normal bold 25px/50px Segoe UI;
+    text-align: center;
+}
+.titulo-bucana {
+    width: 50%;
+    height: 25%;
+}
+.titulo-bucana img,.cont-img img {
+    width: 100%;
+    height: 100%;
+}
+.cont-img {
+    width: 45%;
+    height: 90%;
+    margin: auto;
+}
+.whisky-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #265864;
+}
+.whisky-text h2{
+    padding: 20px 0;
+    color: aliceblue;
+    font: italic normal bold 35px/35px Segoe UI;
+    text-align: center;
+}
+.contenido,.contenido1,.contenido2 {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contenido {
+    background-color: #265864;
+}
+.contenido1 {
+    background-color: #172429;
+}
+.contenido2 {
+    background: linear-gradient(#132c33, #000000);
+}
+.columna {
+    width: 25%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nomb {
+    width: 50%;
+    height: 40%;
+    text-align: center;
+    font: italic normal bold 30px/67px Sitka Banner;
+    letter-spacing: 0px;
+    line-height: normal;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.img-whisky {
+    width: 50%;
+    height: 100%;
+}
+.img-whisky img {
+    width: 100%;
+    height: 100%;
+}
+.marg {
+    margin: auto;
+}
