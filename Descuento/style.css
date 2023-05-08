@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-html,body {
+body {
     height: 100vh;
     background: linear-gradient(#020506, #265864, #000000);
 }
@@ -131,7 +131,7 @@ nav {
     margin-right: 12%;
 }
 
-.imag {
+.img {
     width: 40px;
 }
 

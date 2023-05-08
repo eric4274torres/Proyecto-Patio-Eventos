@@ -159,8 +159,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     margin-top: 10.1rem;
     background: radial-gradient(#F8F2F2, #0A0909, #000000);
+    box-shadow: 0px 31px 37px -7px rgba(0, 0, 0, 0.55);
 }
 .img-bucana {
     width: 70%;
@@ -218,7 +220,9 @@ header {
     background-color: #172429;
 }
 .contenido2 {
+    position: relative;
     background: linear-gradient(#132c33, #000000);
+    box-shadow: 0px 20px 14px -8px #1C4049;
 }
 .columna {
     width: 25%;
@@ -247,4 +251,61 @@ header {
 }
 .marg {
     margin: auto;
+}
+
+
+footer {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+}
+
+.footer-siguenos,
+.footer-contacto,
+.footer-horarios {
+    width: 15%;
+    height: 80%;
+    text-align: center;
+    font: italic normal normal 15px/30px Segoe UI;
+    letter-spacing: 0px;
+    color: #F5F5F5;
+    opacity: 1;
+}
+
+.footer-siguenos {
+    margin-left: 10%;
+}
+
+.footer-horarios {
+    margin-right: 10%;
+}
+
+.footer-siguenos img {
+    width: 50px;
+    margin: 15px;
+}
+
+.footer-contacto img {
+    width: 45px;
+}
+
+.alinear {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alinear a {
+    margin-left: 55px;
+}
+
+.alinear p {
+    margin-right: 10px;
+}
+
+.alinear .p {
+    margin-right: 90px;
 }
