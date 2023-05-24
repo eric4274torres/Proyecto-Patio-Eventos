@@ -1,10 +1,3 @@
-.principal {
-    background: linear-gradient(#020506, #265864, #000000);
-    background-repeat: no-repeat;
-    height: 3150px;
-    width: 100%;
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -13,7 +6,6 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(#020506, #265864, #000000);
 }
 
 nav {
@@ -37,7 +29,7 @@ nav {
 }
 
 .menu-horizontal>li:hover {
-    background-color: #d2830ea3;
+    background-color: #cf810bde;
 }
 
 .menu-vertical {
@@ -53,7 +45,7 @@ nav {
 }
 
 .menu-vertical li:hover {
-    background-color: #d2830ea3;
+    background-color: #cf810bde;
 }
 
 .menu-vertical li a {
@@ -66,10 +58,10 @@ nav {
 
 .menu-horizontal>li {
     display: inline-block;
-    position: relative;
+    text-align: center;
 }
 
-.menu-horizontal>li::before {
+/* .menu-horizontal>li::before {
     content: "";
     height: 5px;
     width: 0%;
@@ -82,15 +74,14 @@ nav {
 
 .menu-horizontal>li:hover::before {
     width: 100%;
-}
+} */
 
 .menu-vertical>li {
     display: inline-block;
     width: 154px;
-    position: relative;
 }
 
-.menu-vertical>li::before {
+/* .menu-vertical>li::before {
     content: "";
     height: 5px;
     width: 0%;
@@ -103,7 +94,7 @@ nav {
 
 .menu-vertical>li:hover::before {
     width: 100%;
-}
+} */
 
 .nav-logos {
     width: 100%;
@@ -115,6 +106,57 @@ nav {
     background-color: #020506;
     /* position: sticky;
     top: 0; */
+}
+.buscar{
+    position: relative;
+    padding: 5px;
+}
+.buscar input{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #000000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+    margin-top: -3px;
+}
+.img{
+    width: 40px;
+}
+.bt{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #000000;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px;
+}
+.bt img{
+    transition: all .7s ease;
+}
+.buscar:hover img{
+    transform: rotate(-360deg);
+}
+.buscar:hover input{
+    width: 200px;
+}
+.buscar input:focus{
+    width: 200px;
+}
+.imag {
+    width: 40px;
 }
 
 .log {
@@ -129,11 +171,10 @@ nav {
 }
 
 .nav-logos ul {
+    display: flex;
+    align-self: center;
+    justify-content: center;
     margin-right: 12%;
-}
-
-.img {
-    width: 40px;
 }
 
 .logo {
@@ -148,12 +189,12 @@ nav {
     text-align: left;
     font: normal normal normal 50px/8px Vladimir Script;
     letter-spacing: 0px;
-    color: #DFAA2D;
-    text-shadow: 0px 3px 6px #1219E4DB;
+    color: #dfaa2d;
+    text-shadow: 0px 3px 6px #1219e4db;
     opacity: 1;
     margin-left: -40px;
     margin-top: 10px;
-    -webkit-text-stroke: 0.5px #AF2727;
+    -webkit-text-stroke: 0.5px #af2727;
 }
 
 header {
@@ -163,37 +204,118 @@ header {
     width: 100%;
 }
 
-/*----------------------------------------------------------------*/
-.imagen {
-    width: 200px;
-    height: 107px;
-    margin-left: 85px;
-    margin-top: -15px;
+.sub-nav {
+    position: fixed;
+    top: 9%;
+    right: 12%;
+    width: 250px;
+    max-height: 0px;
+    overflow: hidden;
+    background: linear-gradient(#020506, #265864, #000000);
+    border-radius: 15px;
+    transition: max-height 0.5s;
+    color: #fdfdfc;
+    font: italic normal bold 18px/15px Segoe UI;
 }
 
-.container-all {
-    margin-top: 10rem;
-    position: relative;
-    max-width: 10000px;
+.sub-nav.open-menu {
+    max-height: 400px;
+}
+
+.sub-menu {
     width: 100%;
+    padding: 20px;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    font-weight: 500;
+}
+
+.info img {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #dfaa2d;
+    margin: 10px 0 10px;
+}
+
+.sub-menu-link img {
+    width: 40px;
+    background: #dda217;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 12px 0;
+    font: italic normal bold 15px/15px Segoe UI;
+}
+
+.sub-menu-link p {
+    width: 100%;
+}
+
+.sub-menu-link span {
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span {
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+    font-weight: 600;
+    transform: translateY(5px);
+}
+
+.clic {
+    cursor: pointer;
+}
+/* diseños del cuerpo de slider de imagenes*/
+
+img {
+    max-width: 100%;
+}
+
+.interaction {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 0.47%;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0px 31px 37px -7px rgba(0, 0, 0, 0.48);
 }
 
-.slide {
+.slider {
+    margin-top: 9rem;
     display: flex;
     transform: translate3d(0, 0, 0);
     transition: all 600ms;
-    animation: autoplay;
+    animation-name: autoplay;
     animation-duration: 15s;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-
 }
 
-.item-slide {
+.item {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -202,7 +324,7 @@ header {
     max-width: 100%;
 }
 
-.pagination {
+.pagina {
     position: absolute;
     bottom: 20px;
     left: 0;
@@ -213,11 +335,11 @@ header {
     width: 100%;
 }
 
-.pagination-item {
+.item-pagina {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid white;
+    border: 2px solid #ffffff;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -229,123 +351,96 @@ header {
     transition: all 300ms;
 }
 
-.pagination-item:hover {
+.item-pagina:hover {
     transform: scale(3);
 }
 
-.pagination-item img {
+.item-pagina img {
     display: inline-block;
     max-width: none;
     height: 100%;
     transform: scale(1);
     opacity: 0;
     transition: all 300ms;
-
 }
 
-.pagination-item:hover img {
+.item-pagina:hover img {
     opacity: 1;
     transform: scale(1);
 }
 
-input[id="1"]:checked~.slide {
+input[id="1"]:checked~.slider {
     animation: none;
     transform: translate3d(0, 0, 0);
 }
 
-input[id="1"]:checked~.pagination .pagination-item[for="1"] {
-    background: #fff;
+input[id="1"]:checked~.pagina .item-pagina[for="1"] {
+    background: #ffffff;
 }
 
-input[id="2"]:checked~.slide {
+input[id="2"]:checked~.slider {
     animation: none;
     transform: translate3d(calc(-100% * 1), 0, 0);
 }
 
-input[id="2"]:checked~.pagination .pagination-item[for="2"] {
-    background: #fff;
+input[id="2"]:checked~.pagina .item-pagina[for="2"] {
+    background: #ffffff;
 }
 
-input[id="3"]:checked~.slide {
+input[id="3"]:checked~.slider {
     animation: none;
     transform: translate3d(calc(-100% * 2), 0, 0);
 }
 
-input[id="3"]:checked~.pagination .pagination-item[for="3"] {
-    background: #fff;
+input[id="3"]:checked~.pagina .item-pagina[for="3"] {
+    background: #ffffff;
 }
-input[id="4"]:checked~.slide {
+
+input[id="4"]:checked~.slider {
     animation: none;
     transform: translate3d(calc(-100% * 3), 0, 0);
 }
 
-input[id="4"]:checked~.pagination .pagination-item[for="4"] {
-    background: #fff;
+input[id="4"]:checked~.pagina .item-pagina[for="4"] {
+    background: #ffffff;
 }
-input[id="5"]:checked~.slide {
+
+input[id="5"]:checked~.slider {
     animation: none;
     transform: translate3d(calc(-100% * 4), 0, 0);
 }
 
-input[id="5"]:checked~.pagination .pagination-item[for="5"] {
-    background: #fff;
-}
-input[id="6"]:checked~.slide {
-    animation: none;
-    transform: translate3d(calc(-100% * 5), 0, 0);
-}
-
-input[id="6"]:checked~.pagination .pagination-item[for="6"] {
-    background: #fff;
+input[id="5"]:checked~.pagina .item-pagina[for="5"] {
+    background: #ffffff;
 }
 
 @keyframes autoplay {
-    16.6% {
+    20% {
         transform: translate3d(calc(-100% * 0), 0, 0);
     }
 
-    33.2% {
+    40% {
         transform: translate3d(calc(-100% * 1), 0, 0);
     }
 
-    49.8% {
+    60% {
         transform: translate3d(calc(-100% * 2), 0, 0);
     }
 
-    66.4% {
+    80% {
         transform: translate3d(calc(-100% * 3), 0, 0);
     }
 
-    83% {
+    100% {
         transform: translate3d(calc(-100% * 4), 0, 0);
     }
-
-    100% {
-        transform: translate3d(calc(-100% * 5), 0, 0);
-    }
 }
 
-/*----------------------------------------------------------------*/
+/* diseños de los container de los productos*/
 
-.imagenes {
-    margin-top: -70px;
-    margin-left: 85%;
-}
-
-.titulo h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-    color: aliceblue;
-    font: italic normal bold 35px/35px Segoe UI;
-    text-align: center;
-    background-color: #265864;
-}
-
-.container1,
-.container2,
-.container3 {
+.container-img,
+.container-img1,
+.container-img2 {
     width: 100%;
     height: 600px;
     display: flex;
@@ -353,62 +448,80 @@ input[id="6"]:checked~.pagination .pagination-item[for="6"] {
     justify-content: space-between;
 }
 
-.container1 {
+.container-img {
     background-color: #265864;
 }
 
-.container2 {
+.container-img1 {
     background-color: #172429;
 }
 
-.container3 {
+.container-img2 {
     position: relative;
     background: linear-gradient(#132c33, #000000);
     box-shadow: 0px 20px 14px -8px #1C4049;
 }
 
-.listados {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.imagen img {
+    width: 700%;
+}
+
+.imagen,
+.imagen2,
+.text1 {
+    margin-left: 5.8%;
+}
+
+.text,
+.text2 {
+    width: 28%;
+    margin-right: 15%;
+    color: #ffffff;
+    text-align: center;
+    font: italic normal 600 35px/67px Segoe UI;
+    letter-spacing: 0px;
+    opacity: 1;
+    line-height: normal;
+}
+
+.imagen2 img,
+.imagen1 img {
+    width: 800px;
+}
+
+.text1 {
     width: 25%;
-    height: 70%;
-}
-
-.lista {
-    width: 50%;
-    height: 40%;
+    height: 50%;
+    color: #ffffff;
     text-align: center;
-    font: italic normal bold 30px/67px Sitka Banner;
+    font: italic normal 600 25px/67px Segoe UI;
     letter-spacing: 0px;
-    line-height: normal;
-    color: #FFFFFF;
     opacity: 1;
+    margin-left: 12.5%;
 }
 
-.lista h4 {
+.text1 h1 {
+    line-height: 50px;
+}
+
+.text1 p {
+    margin-top: 15px;
+    line-height: 35px;
+}
+
+.text1 a {
+    padding: 5px 20px;
+    background-color: #DC8B12;
+    text-decoration: none;
     text-align: center;
-    font: italic normal bold 35px/67px Sitka Banner;
+    font: italic normal 600 25px/30px Segoe UI;
     letter-spacing: 0px;
-    line-height: normal;
-    color: #FFFFFF;
+    color: #0A0A0A;
     opacity: 1;
+    border-radius: 15px;
 }
+/*diseños para el pie de pagina*/
 
-.logo-img {
-    width: 50%;
-}
-
-.logo-img img {
-    width: 100%;
-    height: 100%;
-}
-
-.marg {
-    margin: auto;
-}
-
-/*----------------------------------------------------------------*/
 footer {
     width: 100%;
     height: 170px;

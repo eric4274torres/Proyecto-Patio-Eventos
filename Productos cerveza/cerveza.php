@@ -1,3 +1,12 @@
+<?php
+session_start();
+error_reporting(0);
+$varsesion = $_SESSION["usuario"];
+if ($varsesion == null || $varsesion = '') {
+    header("Location:../../.././../Proyecto-Patio-Eventos/Login/login.php");
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cervezas</title>
     <link rel="icon" href="image/icon.png" type="image/png">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -19,23 +28,47 @@
                 <h1>Disco Bar</h1>
             </div>
             <ul>
-                <li><a href="/"><img src="image/lupa.png" alt="lupa" class="img" /></a></li>
-                <li><a href="/"><img src="image/carrito de compras.png" alt="carrito" class="img" /></a></li>
-                <li><a href="/"><img src="image/usuario.png" alt="login" class="img" /></a></li>
+                <li>
+                    <div class="buscar">
+                        <input type="text" placeholder="Buscar" required>
+                        <div class="bt">
+                            <img src="image/lupa.png" alt="" class="img">
+                        </div>
+                    </div>
+                </li>
+                <li><a href=""><img src="image/carrito de compras.png" alt="carrito" class="img" /></a></li>
+                <li>
+                    <img src="image/usuario.png" alt="login" class="img clic" onclick="toggleMenu()" />
+                    <div class="sub-nav" id="subMenu">
+                        <div class="sub-menu">
+                            <div class="info">
+                                <img src="image/usuario.png" alt="">
+                                <h3><b>Diana Polanco</b></h3>
+                            </div>
+                            <hr>
+
+                            <a href="../Controladores/cerrarsesion.php" class="sub-menu-link">
+                                <img src="image/cerrar-sesion.png" alt="">
+                                <p><b> Cerrar Sesión </b></p>
+                                <span><b>></b></span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
         <nav>
             <ul class="menu-horizontal">
-                <li><a href="/Inicio/index.html">Inicio</a></li>
-                <li><a href="/Entretenimiento/index.html">Entretenimiento</a></li>
+                <li><a href="../Inicio/inicio.php">Inicio</a></li>
+                <li><a href="../Entretenimiento/entretenimiento.php">Entretenimiento</a></li>
                 <li>
-                    <a href="/">Producto</a>
+                    <a href="">Producto</a>
                     <ul class="menu-vertical">
-                        <li><a href="/Productos cerveza/index.html">Cerveza</a></li>
-                        <li><a href="/Producto whisky/index.html">Whisky</a></li>
+                        <li><a href="../Productos cerveza/cerveza.php">Cerveza</a></li>
+                        <li><a href="../Producto whisky/whisky.php">Whisky</a></li>
                     </ul>
                 </li>
-                <li><a href="/Reguistro de Proveedor/index.html">Proveedores</a></li>
+                <li><a href="../RegistroProveedores/proveedores.php">Proveedores</a></li>
             </ul>
         </nav>
     </header>
@@ -198,10 +231,8 @@
     <footer>
         <div class="footer-siguenos">
             <p>Siguenos en:</p>
-            <a href="https://www.facebook.com/dmpolanco2010?mibextid=ZbWKwL" target="_blank"><img src="image/facebook.png"
-                    alt=""></a>
-            <a href="https://instagram.com/diana.polanco?igshid=YmMyMTA2M2Y=" target="_blank"><img
-                    src="image/instagram.png" alt=""></a>
+            <a href="https://www.facebook.com/dmpolanco2010?mibextid=ZbWKwL" target="_blank"><img src="image/facebook.png" alt=""></a>
+            <a href="https://instagram.com/diana.polanco?igshid=YmMyMTA2M2Y=" target="_blank"><img src="image/instagram.png" alt=""></a>
         </div>
         <div class="footer-contacto">
             <p>Contacto</p>
@@ -221,6 +252,7 @@
             <p>Domingo: 9:00 - 20:00</p>
         </div>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

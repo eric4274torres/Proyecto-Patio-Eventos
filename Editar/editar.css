@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#020506, #265864, #000000);
+}
+.formulario{
+    width: 25%;
+    height: 550px;
+    background: #356A77;
+    padding: 0 15px;
+    border-radius: 20px;
+}
+.formulario h1{
+    text-align: center;
+    font: italic normal bold 35px/35px Segoe UI;
+    color: #020506;
+    padding: 15px 0;
+}
+form{
+    width: 100%;
+    height:85%;
+}
+.alerta{
+    width: 70%;
+    height: 35px;
+    color: #926c0b;
+    background: #fff3c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    font: italic normal bold 15px/15px Segoe UI;
+    border-radius: 5px;
+}
+label{
+    font: italic normal bold 20px/30px Segoe UI;
+    line-height: normal;
+    color: white;
+}
+.codigo,.nombre,.telefono,.direccion,.correo,.producto{
+    width: 100%;
+    display: flex;
+}
+.codigo input[type="text"],.nombre input[type="text"],.telefono input[type="text"],.direccion input[type="text"],.correo input[type="text"],.producto select{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    padding: 8px 10px;
+    font: italic normal normal 20px/29px Bell MT;
+    letter-spacing: 0px;
+    color: #707070;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s ease all;
+    opacity: 0.8;
+}
+.codigo input:focus,.nombre input:focus,.telefono input:focus,.direccion input:focus,.correo input:focus,.producto select:focus{
+    outline: auto #c9af77;
+}
+.titulo{
+    width: 25%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-top: 15px;
+    padding-right: 5px;
+}
+.campo{
+    width: 75%;
+    height: 40px;
+    margin-top: 15px;
+}
+.Editar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.Editar input{
+    padding: 8px 30px;
+    text-align: center;
+    font: normal normal 600 26px/26px Aristotelica Display Trial;
+    letter-spacing: 0px;
+    color: #703600;
+    opacity: 1;
+    border-radius: 25px;
+    background: #D88811;
+    border: none;
+    cursor: pointer;
+}
+.anchor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: italic normal normal 20px/20px Segoe UI;
+}
+.anchor a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.anchor a:hover{
+    color: #703600;
+}

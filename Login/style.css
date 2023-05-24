@@ -109,30 +109,58 @@ form {
     margin-top: 5%;
 }
 
-.form-input {
+.echo{
     width: 70%;
-    height: 13%;
+    height: 35px;
+    color: #926c0b;
+    background: #fff3c8;
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
-    margin-top: 10%;
-    background-color: #ffffff;
+    text-align: center;
+    font: italic normal 600 15px/15px Segoe UI;
+    border-radius: 5px;
+}
+.form-input{
+    position: relative;
+    width: 70%;
+    height: 55px;
+    background: white;
+    display: flex;
     border-radius: 15px;
+    margin: auto;
+    margin-top: 5%;
     opacity: 0.8;
+  
+}
+
+.mar-input {
+    margin-top: 10%;
 }
 
 .form-input input {
-    width: 80%;
-    height: 40px;
+    width: 90%;
+    height: 55px;
     padding: 0 5px;
-    margin: auto;
-    margin-left: -10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     border: none;
     outline: none;
-    border-left: 3px solid #707070;
     font: italic normal normal 25px/29px Bell MT;
     letter-spacing: 0px;
     color: #707070;
-    opacity: 0.92;
+}
+.icono-ojo{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.4s ease all ;
+}
+.icono-ojo:hover{
+    color: steelblue;
 }
 
 .form-input img {
@@ -140,6 +168,8 @@ form {
     height: 32px;
     margin: auto;
     margin-left: 5px;
+    padding-right: 3px;
+    border-right: 3px solid #707070;
 }
 
 .checket {
@@ -155,7 +185,7 @@ form {
 .submit {
     width: 35.3%;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 10%;
 }
 
 input[type="submit"] {

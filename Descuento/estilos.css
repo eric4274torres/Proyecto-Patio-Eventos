@@ -35,7 +35,7 @@ nav {
 }
 
 .menu-horizontal>li:hover {
-    background-color: #d2830ea3;
+    background-color: #cf810bde;
 }
 
 .menu-vertical {
@@ -51,7 +51,7 @@ nav {
 }
 
 .menu-vertical li:hover {
-    background-color: #d2830ea3;
+    background-color: #cf810bde;
 }
 
 .menu-vertical li a {
@@ -64,11 +64,10 @@ nav {
 
 .menu-horizontal>li {
     display: inline-block;
-    position: relative;
     text-align: center;
 }
 
-.menu-horizontal>li::before {
+/* .menu-horizontal>li::before {
     content: "";
     height: 5px;
     width: 0%;
@@ -81,15 +80,14 @@ nav {
 
 .menu-horizontal>li:hover::before {
     width: 100%;
-}
+} */
 
 .menu-vertical>li {
     display: inline-block;
     width: 154px;
-    position: relative;
 }
 
-.menu-vertical>li::before {
+/* .menu-vertical>li::before {
     content: "";
     height: 5px;
     width: 0%;
@@ -102,7 +100,7 @@ nav {
 
 .menu-vertical>li:hover::before {
     width: 100%;
-}
+} */
 
 .nav-logos {
     width: 100%;
@@ -115,7 +113,52 @@ nav {
     /* position: sticky;
     top: 0; */
 }
+.buscar{
+    position: relative;
+    padding: 5px;
+}
+.buscar input{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #000000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+    margin-top: -3px;
+}
 
+.bt{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #000000;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px;
+}
+.bt img{
+    transition: all .7s ease;
+}
+.buscar:hover img{
+    transform: rotate(-360deg);
+}
+.buscar:hover input{
+    width: 200px;
+}
+.buscar input:focus{
+    width: 200px;
+}
 .log {
     width: 200px;
     cursor: pointer;
@@ -128,6 +171,9 @@ nav {
 }
 
 .nav-logos ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 12%;
 }
 
@@ -160,6 +206,94 @@ header {
     z-index: 1;
     width: 100%;
 }
+
+.sub-nav {
+    position: fixed;
+    top: 9%;
+    right: 12%;
+    width: 250px;
+    max-height: 0px;
+    overflow: hidden;
+    background: linear-gradient(#020506, #265864, #000000);
+    border-radius: 15px;
+    transition: max-height 0.5s;
+    color: #fdfdfc;
+    font: italic normal bold 18px/15px Segoe UI;
+}
+
+.sub-nav.open-menu {
+    max-height: 400px;
+}
+
+.sub-menu {
+    width: 100%;
+    padding: 20px;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    font-weight: 500;
+}
+
+.info img {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #dfaa2d;
+    margin: 10px 0 10px;
+}
+
+.sub-menu-link img {
+    width: 40px;
+    background: #dda217;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 12px 0;
+    font: italic normal bold 15px/15px Segoe UI;
+}
+
+.sub-menu-link p {
+    width: 100%;
+}
+
+.sub-menu-link span {
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span {
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+    font-weight: 600;
+    transform: translateY(5px);
+}
+
+.clic {
+    cursor: pointer;
+}
+
+
+
+
 .principal{
     margin-top: 10rem;
     width: 100%;
@@ -216,6 +350,9 @@ h2{
     height: 100%;
 
 }
+.texto img:hover{
+    transform: scale(1.5);
+}
 .imgdes{
     width: 50%;
     height: 100%;
@@ -231,6 +368,7 @@ h2{
     height: 50%;
     
 }
+
 .nom {
     width: 100%;
     height: 50%;
@@ -241,7 +379,9 @@ h2{
     height: 90%;
     margin: auto;
 }
-
+.desc img:hover{
+    transform: scale(1.1);
+}
 
 /*diseños para el pie de pagina*/
 

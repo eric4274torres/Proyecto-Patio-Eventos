@@ -1,3 +1,12 @@
+<?php
+session_start();
+error_reporting(0);
+$varsesion = $_SESSION["usuario"];
+if ($varsesion == null || $varsesion = '') {
+    header("Location:../../.././../Proyecto-Patio-Eventos/Login/login.php");
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +14,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="inicio.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/icon.png" type="image/png">
     <title>Patio Eventos Disco Bar</title>
 </head>
@@ -19,28 +28,48 @@
             </div>
             <ul>
                 <li>
-                    <a href="/"><img src="img/lupa.png" alt="lupa" class="imag" /></a>
+                    <div class="buscar">
+                        <input type="text" placeholder="Buscar" required>
+                        <div class="bt">
+                            <img src="img/lupa.png" alt="" class="img">
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <a href="/"><img src="img/carrito de compras.png" alt="carrito" class="imag" /></a>
+                    <a href=""><img src="img/carrito de compras.png" alt="carrito" class="imag" /></a>
                 </li>
                 <li>
-                    <a href="/Login/index.html"><img src="img/usuario.png" alt="login" class="imag" /></a>
+                    <img src="img/usuario.png" alt="login" class="imag clic" onclick="toggleMenu()" />
+                    <div class="sub-nav" id="subMenu">
+                        <div class="sub-menu">
+                            <div class="info">
+                                <img src="img/usuario.png" alt="">
+                                <h3><b>Diana Polanco</b></h3>
+                            </div>
+                            <hr>
+
+                            <a href="../Controladores/cerrarsesion.php" class="sub-menu-link">
+                                <img src="img/cerrar-sesion.png" alt="">
+                                <p><b> Cerrar Sesión </b></p>
+                                <span><b>></b></span>
+                            </a>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
         <nav>
             <ul class="menu-horizontal">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/Entretenimiento/index.html">Entretenimiento</a></li>
+                <li><a href="">Inicio</a></li>
+                <li><a href="../Entretenimiento/entretenimiento.php">Entretenimiento</a></li>
                 <li>
                     <a href="/">Producto</a>
                     <ul class="menu-vertical">
-                        <li><a href="/Productos cerveza/index.html">Cerveza</a></li>
-                        <li><a href="/Producto whisky/index.html">Whisky</a></li>
+                        <li><a href="../Productos cerveza/cerveza.php">Cerveza</a></li>
+                        <li><a href="../Producto whisky/whisky.php">Whisky</a></li>
                     </ul>
                 </li>
-                <li><a href="/Reguistro de Proveedor/index.html">Proveedores</a></li>
+                <li><a href="../RegistroProveedores/proveedores.php">Proveedores</a></li>
             </ul>
         </nav>
     </header>
@@ -85,7 +114,7 @@
                 <p>
                     Si hay licor también hay diversión por montón.
                 </p>
-                <a href="/Descuento/index.html">Descuentos</a>
+                <a href="../Descuento/descuento.php">Descuentos</a>
             </div>
             <div class="imagen1">
                 <img src="img/coronita.png">
@@ -105,10 +134,8 @@
     <footer>
         <div class="footer-siguenos">
             <p>Siguenos en:</p>
-            <a href="https://www.facebook.com/dmpolanco2010?mibextid=ZbWKwL" target="_blank"><img src="img/facebook.png"
-                    alt=""></a>
-            <a href="https://instagram.com/diana.polanco?igshid=YmMyMTA2M2Y=" target="_blank"><img
-                    src="img/instagram.png" alt=""></a>
+            <a href="https://www.facebook.com/dmpolanco2010?mibextid=ZbWKwL" target="_blank"><img src="img/facebook.png" alt=""></a>
+            <a href="https://instagram.com/diana.polanco?igshid=YmMyMTA2M2Y=" target="_blank"><img src="img/instagram.png" alt=""></a>
         </div>
         <div class="footer-contacto">
             <p>Contacto</p>
@@ -128,6 +155,7 @@
             <p>Domingo: 9:00 - 20:00</p>
         </div>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
