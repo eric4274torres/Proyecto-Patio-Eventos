@@ -6,7 +6,7 @@ if (!empty($_POST["btningresar"])) {
         echo '<div class="echo">Uno de los campos esta vacio</div>';
     } else {
         $usuario=$_POST["usuario"];
-        $clave=$_POST["password"];
+        $clave=md5($_POST["password"]);
         $_SESSION["usuario"]=$usuario;
         $sql=$conexion->query(" select * from usuario where Nombre='$usuario' and Clave='$clave' ");
         if ($datos=$sql->fetch_object()) {
