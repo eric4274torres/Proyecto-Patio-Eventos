@@ -1,8 +1,7 @@
 <?php
-
     if(!empty($_POST["Registrar"])){
         if (empty($_POST["Codigo"]) or empty($_POST["Proveedor"]) or empty($_POST["Telefono"]) or empty($_POST["Direccion"]) or empty($_POST["Correo" ]) or empty($_POST["Estado" ]) ) {
-            echo '<div class"alerta">Es necesario ingresar los datos del proveedor</div>';
+            echo '<div class="echo">Es necesario ingresar los datos del proveedor</div>';
         } else {
             $Codigo = $_POST["Codigo"];
             $Proveedor = $_POST["Proveedor"];

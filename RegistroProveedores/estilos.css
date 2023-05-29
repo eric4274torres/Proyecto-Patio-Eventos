@@ -333,19 +333,6 @@ header {
     grid-template-rows: repeat(2, 50px);
     gap: 30px;
 }
-.alerta{
-    width: 70%;
-    height: 35px;
-    color: #926c0b;
-    background: #fff3c8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    text-align: center;
-    font: italic normal bold 15px/15px Segoe UI;
-    border-radius: 5px;
-}
 .codigo,.nombre,.telefono,.direccion,.correo,.producto{
     display: flex;
     align-items: center;
@@ -387,7 +374,19 @@ form {
     margin-top: 10px;
     padding: 20px 10px 0 0;
 }
-
+.echo{
+    width: 70%;
+    height: 35px;
+    color: #926c0b;
+    background: #fff3c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    font: italic normal bold 15px/15px Segoe UI;
+    border-radius: 5px;
+}
 .container-registro {
     width: 96%;
     height: 80%;
